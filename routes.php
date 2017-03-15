@@ -7,9 +7,11 @@
 		switch($controller){
 			case('base'):
 				$controller = new BaseController();
-				break;
-			default:
-				$controller = new BaseController();
+			break;
+			case('install'):
+				$controller = new InstallController();
+			break;
+
 
 		}
 
@@ -19,6 +21,7 @@
 	//List of allowed controllers and their actions
 	$controllers = array(
 		'base' => ['home', 'error'],
+		'install' => ['validate', 'create'],
 		);
 
 	//Check that the controller exists and the action i allowed for that controller

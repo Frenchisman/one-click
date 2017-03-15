@@ -2,7 +2,14 @@
 
 	class BaseController{
 		public function home(){
-			require_once('views/pages/home.php');
+			$ini = parse_ini_file('config/config.ini');
+			//if app is installed redirect to login else we launch the install
+			if(isset($ini['installed']) && $ini['installed'] == true){
+				require_once('views/pages/login.php');
+			}
+			else{
+				require_once('views/pages/install.php');
+			}
 		}
 
 		public function error(){
