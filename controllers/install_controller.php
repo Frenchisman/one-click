@@ -83,7 +83,7 @@
 					$db_user,
 					$db_password,
 					$pdo_options);
-				var_dump($dbh);
+
 
 				$sql_table_users = "CREATE TABLE IF NOT EXISTS ".$_SESSION['table_prefix']."_users(
 				id INT(11) AUTO_INCREMENT PRIMARY KEY,
